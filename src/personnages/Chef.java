@@ -1,16 +1,16 @@
-package Personnages;
+package personnages;
 
 public class Chef {
 	private String nom;
 	private int force;
-	private int effePotion = 1;
+	private int effetPotion = 1;
 	private Village village;
 	
 
-	public Chef(String nom, int force, int effePotion, Village village) {
+	public Chef(String nom, int force, int effetPotion, Village village) {
 		this.nom = nom;
 		this.force = force;
-		this.effePotion = effePotion;
+		this.effetPotion = effetPotion;
 		this.village = village;
 	}
 	
