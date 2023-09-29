@@ -1,17 +1,16 @@
 package personnages;
+import personnages.Village;
 
 public class Chef {
 	private String nom;
 	private int force;
 	private int effetPotion = 1;
-	private Village village;
+//	private Village village;
 	
 
-	public Chef(String nom, int force, int effetPotion, Village village) {
+	public Chef(String nom, int force) {
 		this.nom = nom;
 		this.force = force;
-		this.effetPotion = effetPotion;
-		this.village = village;
 	}
 	
 	public String getNom() {
@@ -24,7 +23,7 @@ public class Chef {
 	}
 
 	private String prendreParole() {
-		return "Le chef " + nom + "du village" + village.getNom() + " : ";
+		return "Le chef " + nom + " : ";
 	}
 	
 	public void frapper(Romain romain) {
@@ -33,4 +32,12 @@ public class Chef {
 		
 	}
 
+	public void boirePotion(int effetPotion) {
+		this.effetPotion = effetPotion;
+		parler("Merci Druide, je sens que ma force est " + effetPotion + " fois décuplée");
+	}
+	
+	public String toString() {
+		return nom;
+	}
 }
